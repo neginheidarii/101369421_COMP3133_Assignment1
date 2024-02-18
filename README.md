@@ -43,6 +43,15 @@ login user
 <img width="1440" alt="Screenshot 2024-02-18 at 10 48 35 AM" src="https://github.com/neginheidarii/101369421_COMP3133_Assignment1/assets/113136968/a6c0e1f6-0b81-421e-9c06-7d082ffb90db">
 
 
+mongo db saving all users:
+<img width="1440" alt="Screenshot 2024-02-18 at 10 56 04 AM" src="https://github.com/neginheidarii/101369421_COMP3133_Assignment1/assets/113136968/7b76295a-11e9-4e62-bd8d-b7bb9a4a7522">
+
+
+mongodb saving all employees:
+<img width="1440" alt="Screenshot 2024-02-18 at 10 56 16 AM" src="https://github.com/neginheidarii/101369421_COMP3133_Assignment1/assets/113136968/1716b0b9-026c-4e59-9720-b6cf5b7f0ac5">
+
+
+
 
 
 
