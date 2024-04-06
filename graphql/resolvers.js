@@ -14,7 +14,7 @@ const resolvers = {
       const user = await User.findOne({
         $or: [{ username: username }, { email: username }],
       });
-
+ 
       if (!user) {
         throw new Error("User not found");
       }
