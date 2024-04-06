@@ -20,7 +20,7 @@ const typeDefs = gql`
   type Query {
     getEmployees: [Employee]
     getEmployeeByID(_id: ID!): Employee
-    login(username: String!, password: String!): User
+    login(email: String!, password: String!): User
   }
 
   type Mutation {
