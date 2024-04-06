@@ -38,7 +38,7 @@ const resolvers = {
       try {
         await newUser.save();
         return newUser;
-       } catch (err) {
+      } catch (err) {
         throw new Error("Username or email already exists");
       }
     },
@@ -75,15 +75,12 @@ const resolvers = {
         { new: true }
       );
     },
-    deleteEmployee: async (parent, args) => {
-      const { _id } = args;
-
-      const existingEmployee = await Employee.findById(_id);
-      if (!existingEmployee) {
+    deleteEmployee: async (_, { _id }) => {
+      const employee = await Employee.findByIdAndDelete(_id);
+      if (!employee) {
         throw new Error("Employee not found");
       }
-
-      return await Employee.findByIdAndDelete(_id);
+      return employee;
     },
   },
 };
