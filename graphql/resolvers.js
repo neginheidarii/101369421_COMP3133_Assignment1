@@ -75,16 +75,12 @@ const resolvers = {
         { new: true }
       );
     },
-    deleteEmployee: async (parent, args) => {
-      const { _id } = args;
-
-      const existingEmployee = await Employee.findById(_id);
-      if (!existingEmployee) {
-        throw new Error("Employee not found");
-      }
-
-      return await Employee.findByIdAndDelete(_id);
-    },
+      deleteEmployee: async (_, { _id }) => {
+        const employee = await Employee.findByIdAndDelete(_id);
+        if (!employee) {
+          throw new Error('Employee not found');
+        }
+        return employee;
   },
 };
 module.exports = resolvers;
