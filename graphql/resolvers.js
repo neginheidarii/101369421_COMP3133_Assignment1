@@ -82,5 +82,7 @@ const resolvers = {
         }
         return employee;
   },
+  },
 };
+
 module.exports = resolvers;
