@@ -76,11 +76,11 @@ const resolvers = {
       );
     },
     deleteEmployee: async (_, { _id }) => {
-      const employee = await Employee.findById(_id);
+      const employee = await Employee.findByIdAndDelete(_id);
       if (!employee) {
         throw new Error("Employee not found");
       }
-      return employee.findByIdAndDelete(_id);
+      return employee;
     },
   },
 };
