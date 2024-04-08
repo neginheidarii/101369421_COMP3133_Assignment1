@@ -14,7 +14,7 @@ const resolvers = {
       const user = await User.findOne({
         $or: [{ username: email }, { email: email }],
       });
- 
+
       if (!user) {
         throw new Error("User not found");
       }
@@ -38,7 +38,7 @@ const resolvers = {
       try {
         await newUser.save();
         return newUser;
-       } catch (err) {
+      } catch (err) {
         throw new Error("Username or email already exists");
       }
     },
@@ -75,13 +75,13 @@ const resolvers = {
         { new: true }
       );
     },
-      deleteEmployee: async (_, { _id }) => {
-        const employee = await Employee.findByIdAndDelete(_id);
-        if (!employee) {
-          throw new Error('Employee not found');
-        }
-        return employee;
-  },
+    deleteEmployee: async (_, { _id }) => {
+      const employee = await Employee.findById(_id);
+      if (!employee) {
+        throw new Error("Employee not found");
+      }
+      return employee.findByIdAndDelete(_id);
+    },
   },
 };
 
