@@ -75,14 +75,13 @@ const resolvers = {
         { new: true }
       );
     },
-     deleteEmployee: async (_parent, { _id }: { _id: string }) => {
+    deleteEmployee: async (_, { _id }) => {
       const employee = await Employee.findByIdAndDelete(_id);
       if (!employee) {
         throw new Error("Employee not found");
       }
-      return employee; 
+      return employee;
     },
-    
   },
 };
 
