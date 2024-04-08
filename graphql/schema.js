@@ -43,7 +43,7 @@ const typeDefs = gql`
       salary: Float!
     ): Employee
 
-    deleteEmployee(_id: string!): String
+    deleteEmployee(_id: ID!): String
   }
 `;
 
